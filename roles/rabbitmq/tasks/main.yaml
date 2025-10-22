@@ -6,15 +6,15 @@
 - name: install rabbitmq-server
   ansible.builtin.dnf:
     name: rabbitmq-server
-    state: present
+    state: installed
 
-- name: enable and start rabbitmq-server
+- name: enable and start rabbitmq
   ansible.builtin.service:
     name: rabbitmq-server
     state: started
     enabled: yes
 
-- name: create rabbitmq server
+- name: create rabbitmq user
   community.rabbitmq.rabbitmq_user:
     user: roboshop
     password: roboshop123
