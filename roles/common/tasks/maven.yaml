@@ -11,7 +11,7 @@
     name: "{{ item }}"
     executable: pip3.9
   loop:
-  - pymysql
+  - PYMYSQL
   - cryptography 
 
 
